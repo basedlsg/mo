@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home" android:title="Home" android:icon="@drawable/baseline_home_24" />
+    <item android:id="@+id/menu_profile" android:title="Profile" android:icon="@drawable/baseline_person_24" />
+    <item android:id="@+id/menu_job" android:title="Add Job" android:icon="@drawable/baseline_assignment_add_24" />
+    <!--<item android:id="@+id/menu_payment" android:title="Payments" android:icon="@drawable/baseline_credit_card_24" /> -->
+    <item android:id="@+id/menu_promo" android:title="Promo" android:icon="@drawable/baseline_card_giftcard_24" />
+    <item android:id="@+id/menu_help" android:title="Help" android:icon="@drawable/baseline_contact_support_24" />
+    <item android:id="@+id/menu_about" android:title="About Us" android:icon="@drawable/baseline_info_24" />
+    <item android:id="@+id/menu_logout" android:title="Logout" android:icon="@drawable/baseline_exit_to_app_24" />
+</menu>

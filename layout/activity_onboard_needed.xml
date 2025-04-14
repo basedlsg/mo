@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Toolbar with Back Button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/mowie_green"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:title="Onboarding"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/launchButton"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Complete Onboard"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/mowie_green"
+            android:padding="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Log Out"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/system_red"
+            android:padding="16sp"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

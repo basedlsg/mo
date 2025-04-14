@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Address in bold -->
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textDay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Day in the top right corner -->
+    <TextView
+        android:id="@+id/textDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day: Monday"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Regularity -->
+    <TextView
+        android:id="@+id/textRegularity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Regularity: Weekly"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAddress" />
+
+    <!-- Job Status -->
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Job Status: Paid"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textRegularity" />
+
+    <!-- Package in the bottom right corner -->
+    <TextView
+        android:id="@+id/textPackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Package: Gold"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textStatus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Delete icon -->
+    <ImageView
+        android:id="@+id/deleteIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_delete_24_black"
+        android:padding="4dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="Delete Icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/dividerHorizontal"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textPackage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
