@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Mowie</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="prompt_select_frequency">Select Frequency</string>
+    <string name="prompt_select_day">Select Day</string>
+    <string name="prompt_select_package">Select Package</string>
+
+    <string-array name="frequency_options">
+        <item>One Time</item>
+        <item>Weekly</item>
+        <item>Bi-Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="package_options_standard">
+        <item>Mowie\'s Best - Mow, Edge, Trim &amp; Bag $50</item>
+        <item>Clean Cut - Mow, Edging, Trim $40</item>
+        <item>Quick Cut - Mow $28</item>
+        <item>Garbage Pickup $250</item>
+        <item>Yard Cleanup $112.50</item>
+        <item>Leaf Cleanup $75</item>
+        <item>Edging $30</item>
+        <item>Bagging Fee $15</item>
+        <item>Bush Trimming Starting at $25</item>
+    </string-array>
+
+    <string-array name="package_options_medium">
+        <item>Mowie\'s Best - Mow, Edge, Trim &amp; Bag $60</item>
+        <item>Clean Cut - Mow, Edging, Trim $50</item>
+        <item>Quick Cut - Mow $38</item>
+        <item>Garbage Pickup $250</item>
+        <item>Yard Cleanup $187.50</item>
+        <item>Leaf Cleanup $120</item>
+        <item>Edging $30</item>
+        <item>Bagging Fee $15</item>
+        <item>Bush Trimming Starting at $25</item>
+    </string-array>
+
+    <string-array name="package_options_large">
+        <item>Mowie\'s Best - Mow, Edge, Trim &amp; Bag $70</item>
+        <item>Clean Cut - Mow, Edging, Trim $60</item>
+        <item>Quick Cut - Mow $48</item>
+        <item>Garbage Pickup $250</item>
+        <item>Yard Cleanup $262.50</item>
+        <item>Leaf Cleanup $165</item>
+        <item>Edging $30</item>
+        <item>Bagging Fee $15</item>
+        <item>Bush Trimming Starting at $25</item>
+    </string-array>
+
+
+</resources>
