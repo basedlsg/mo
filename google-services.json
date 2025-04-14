@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "632151172088",
+    "firebase_url": "https://mowie-2598c-default-rtdb.firebaseio.com",
+    "project_id": "mowie-2598c",
+    "storage_bucket": "mowie-2598c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632151172088:android:1ae3f6e1af33ac52ebac0d",
+        "android_client_info": {
+          "package_name": "com.mowieinc.mowie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbnHJo8OsqDjehRKUqM5t5oaqTDsdQtIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632151172088-h6alhsuj1anthauf9eqi9aj9f32qrr9f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Mowie.Mowie-IOS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632151172088:android:538baac48e737754ebac0d",
+        "android_client_info": {
+          "package_name": "com.mowieinc.mowiekotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbnHJo8OsqDjehRKUqM5t5oaqTDsdQtIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632151172088-h6alhsuj1anthauf9eqi9aj9f32qrr9f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Mowie.Mowie-IOS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632151172088:android:2353ae91628b69d6ebac0d",
+        "android_client_info": {
+          "package_name": "com.mowieinc.mowiepro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbnHJo8OsqDjehRKUqM5t5oaqTDsdQtIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632151172088-vnrh0ujo1k82fu1r98ddjgof8hbolfbo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632151172088-h6alhsuj1anthauf9eqi9aj9f32qrr9f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Mowie.Mowie-IOS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
