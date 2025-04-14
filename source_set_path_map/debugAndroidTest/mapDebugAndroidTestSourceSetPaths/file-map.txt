@@ -1,0 +1,6 @@
+com.mowieinc.mowiekotlin.test.app-core-1.6.1-0 C:\Users\vell6\.gradle\caches\8.9\transforms\1bb183fa6334b04ef45bf21240b6a3cc\transformed\core-1.6.1\res
+com.mowieinc.mowiekotlin.test.app-tracing-1.2.0-1 C:\Users\vell6\.gradle\caches\8.9\transforms\6be6780f79d0537648f47dabaad41c7d\transformed\tracing-1.2.0\res
+com.mowieinc.mowiekotlin.test.app-androidTest-2 C:\Users\vell6\source\repos\MowieKotlin\app\build\generated\res\resValues\androidTest\debug
+com.mowieinc.mowiekotlin.test.app-mergeDebugAndroidTestResources-3 C:\Users\vell6\source\repos\MowieKotlin\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.mowieinc.mowiekotlin.test.app-mergeDebugAndroidTestResources-4 C:\Users\vell6\source\repos\MowieKotlin\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.mowieinc.mowiekotlin.test.app-debugAndroidTest-5 C:\Users\vell6\source\repos\MowieKotlin\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
