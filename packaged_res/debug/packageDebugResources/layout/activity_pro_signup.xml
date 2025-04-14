@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/apk/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    tools:context=".RegisterActivity" >
+
+    <!-- Logo at the top center -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_mowie"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Business Logo"/>
+
+    <!-- Business Name Input -->
+    <EditText
+        android:id="@+id/business_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Business Name"
+        android:inputType="text"/>
+
+    <!-- EIN Input -->
+    <EditText
+        android:id="@+id/ein"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter EIN"
+        android:maxLength="9"
+        android:inputType="number"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+</LinearLayout>

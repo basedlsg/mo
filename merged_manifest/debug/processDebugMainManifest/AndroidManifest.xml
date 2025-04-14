@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mowieinc.mowiekotlin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="35" />
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+    <queries>
+
+        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+        <package android:name="com.android.chrome" />
+        <!-- Added to check the default browser that will host the AuthFlow. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.mowieinc.mowiekotlin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.mowieinc.mowiekotlin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_mowielogo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_mowielogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mowie.NoActionBar" >
+
+        <!-- Splash Screen Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Mowie.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.LoginActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.RegisterActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- User Home Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.UserHomeActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Create Job Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.CreateJobActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- About Us Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.AboutUsActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Help Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.HelpActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Profile Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.ProfilePageActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Payment Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.PaymentActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Job Detail Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.JobDetailsActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Forgot Password Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.ForgotPasswordActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Pro Home Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.ProHomeActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Pro Sign Up Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.ProSignUpActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Background Check Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.BackgroundCheckActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Onboard Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.OnboardActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Earnings Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.EarningsActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Pro Account Page Activity -->
+        <activity
+            android:name="com.mowieinc.mowiekotlin.ProAccountActivity"
+            android:theme="@style/Theme.Mowie.NoActionBar" />
+
+        <!-- Add more activities as needed -->
+        <activity
+            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+            android:exported="false"
+            android:theme="@style/StripePaymentSheetDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+            android:exported="false"
+            android:theme="@style/StripePaymentSheetDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+            android:exported="false"
+            android:theme="@style/StripePaymentSheetDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+            android:exported="false"
+            android:theme="@style/StripePaymentSheetDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.link.LinkActivity"
+            android:exported="false"
+            android:label="@string/link"
+            android:theme="@style/LinkBaseTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+            android:exported="false"
+            android:theme="@style/StripePaymentSheetDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.view.PaymentMethodsActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.view.PaymentFlowActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.stripe.android.view.PaymentRelayActivity"
+            android:exported="false"
+            android:theme="@style/StripeTransparentTheme" />
+        <!--
+        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+        launched the browser Activity will also handle the return URL deep link.
+        -->
+        <activity
+            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/StripeTransparentTheme" />
+        <activity
+            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/StripeTransparentTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Must match `DefaultReturnUrl#value`. -->
+                <data
+                    android:host="payment_return_url"
+                    android:path="/com.mowieinc.mowiekotlin"
+                    android:scheme="stripesdk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+            android:exported="false"
+            android:theme="@style/StripeGooglePayDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+            android:exported="false"
+            android:theme="@style/StripeGooglePayDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+            android:exported="false"
+            android:theme="@style/StripeGooglePayDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+            android:exported="false"
+            android:theme="@style/PayLauncherDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+            android:exported="false"
+            android:theme="@style/StripeTransparentTheme" />
+        <activity
+            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+            android:exported="false"
+            android:theme="@style/Stripe3DS2Theme" />
+        <activity
+            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Returning from app2app: return_url is triggered to reopen web AuthFlow and poll accounts. -->
+                <data
+                    android:host="link-accounts"
+                    android:pathPrefix="/com.mowieinc.mowiekotlin/authentication_return"
+                    android:scheme="stripe-auth" />
+
+                <!-- Returning from app2app: return_url is triggered to reopen native AuthFlow and poll accounts. -->
+                <data
+                    android:host="link-native-accounts"
+                    android:pathPrefix="/com.mowieinc.mowiekotlin/authentication_return"
+                    android:scheme="stripe-auth" />
+
+                <!-- End of web AuthFlow success and cancel URIs that begin with "stripe-auth://link-accounts/{app-id}/...” -->
+                <data
+                    android:host="link-accounts"
+                    android:path="/com.mowieinc.mowiekotlin/success"
+                    android:scheme="stripe-auth" />
+                <data
+                    android:host="link-accounts"
+                    android:path="/com.mowieinc.mowiekotlin/cancel"
+                    android:scheme="stripe-auth" />
+
+                <!-- Opening app2app: Web flow triggers stripe-auth://native-redirect/{app-id}/http://web-that-redirects-to-native -->
+                <data
+                    android:host="native-redirect"
+                    android:pathPrefix="/com.mowieinc.mowiekotlin"
+                    android:scheme="stripe-auth" />
+
+                <!-- Accepts success/cancel/fail URIs that begin with "stripe://auth-redirect” -->
+                <data
+                    android:host="auth-redirect"
+                    android:pathPrefix="/com.mowieinc.mowiekotlin"
+                    android:scheme="stripe" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme" />
+        <activity
+            android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity"
+            android:exported="false"
+            android:theme="@style/StripeDefaultTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer"
+            android:authorities="com.mowieinc.mowiekotlin.financialconnections-init"
+            android:exported="false"
+            android:multiprocess="true" />
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.mowieinc.mowiekotlin.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <service
+            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+            android:enabled="true"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+        </service>
+
+        <activity
+            android:name="androidx.credentials.playservices.HiddenActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:enabled="true"
+            android:exported="false"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Theme.Hidden" >
+        </activity>
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.mowieinc.mowiekotlin.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="androidx.activity.ComponentActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="aia-compat-api-min-version"
+            android:value="1" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+        <activity
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" />
+    </application>
+
+</manifest>
